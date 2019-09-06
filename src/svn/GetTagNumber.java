@@ -15,7 +15,8 @@ public class GetTagNumber {
 	static SVNRepository repository;
 
 	public static void main(String[] args) throws SVNException {
-		String projectName = "GQMD_CoalTransportation";
+		// String projectName = "GQMD_CoalTransportation";
+		String projectName = "CEKE_coalTrans";
 		SVN.auth(svnRoot, username, password);
 		repository = SVN.getRepository();
 		List<String> svnDirEntryNames = SVN.getSVNDirEntryNames(projectPath + projectName);

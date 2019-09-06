@@ -43,7 +43,7 @@ public class ReadText {
 		System.out.println(sb.toString());
 	}
 
-	private static String[] txt2strs(String txt2String) {
+	public static String[] txt2strs(String txt2String) {
 		return txt2String.split("\r\n");
 
 	}

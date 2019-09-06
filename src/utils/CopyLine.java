@@ -14,8 +14,8 @@ import java.util.List;
 
 public class CopyLine {
 	public static void main(String[] args) throws IOException {
-		String path = "C:/Users/Administrator/Desktop/logs/logs1/";
-		String outPath = "C:/Users/Administrator/Desktop/logs/logs1/log.txt";
+		String path = "C:/Users/Administrator/Desktop/logs 73/";
+		String outPath = "C:/Users/Administrator/Desktop/log1226.txt";
 		miltiCopy(path, outPath, true);
 		// copySpecialLine(path, outPath, false);
 	}

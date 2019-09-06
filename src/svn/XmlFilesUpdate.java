@@ -30,7 +30,8 @@ public class XmlFilesUpdate {
 		// 获得svn
 		SVN.auth(svnRoot, username, password);
 		// String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/内蒙打版/";
-		String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/甘其毛都打版/";
+		// String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/甘其毛都打版/";
+		String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/策克打版/";
 		String[] xmlPaths = XmlUtils.getAllXmlPaths(files);
 		for (String string : xmlPaths) {
 			updateAllXml(string);
