@@ -26,9 +26,10 @@ public class MiltiDateCompare {
 	static String svnRoot = "svn://192.168.199.197/svnroot/";
 	static String username = "tengt";
 	static String password = "wdmms:GBBESWDW1";
-	// static String xmlpath = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/甘其毛都打版/";
+	static String xmlpath = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/甘其毛都打版/";
 	// static String xmlpath = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/内蒙打版/";
-	static String xmlpath = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/策克打版/";
+	// static String xmlpath = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/策克打版/";
+	// static String xmlpath = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/美华打版/";
 	static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
 	static SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 

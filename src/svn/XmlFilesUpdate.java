@@ -22,16 +22,15 @@ public class XmlFilesUpdate {
 	static String svnRoot = "svn://192.168.199.197/svnroot/";
 	static String username = "tengt";
 	static String password = "wdmms:GBBESWDW1";
-	// static String xmlpath =
-	// "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/内蒙打版/UAC_NBgodo.build.xml";
 
 	public static void main(String[] args)
 			throws InstantiationException, IllegalAccessException, SAXException, DocumentException, IOException {
 		// 获得svn
 		SVN.auth(svnRoot, username, password);
 		// String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/内蒙打版/";
-		// String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/甘其毛都打版/";
-		String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/策克打版/";
+		String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/甘其毛都打版/";
+		// String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/策克打版/";
+		// String files = "D:/0滕腾文件夹0/01福瑞电子文件/44打版xml/美华打版/";
 		String[] xmlPaths = XmlUtils.getAllXmlPaths(files);
 		for (String string : xmlPaths) {
 			updateAllXml(string);
@@ -39,6 +38,7 @@ public class XmlFilesUpdate {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	private static void updateAllXml(String xmlpath)
 			throws DocumentException, UnsupportedEncodingException, FileNotFoundException, IOException {
 		if (!xmlpath.contains(".xml")) {
@@ -61,6 +61,7 @@ public class XmlFilesUpdate {
 	 * @param elements
 	 * @param xmlpath
 	 */
+	@SuppressWarnings({ "rawtypes", "deprecation" })
 	private static void updateVersion(List elements) {
 		for (Object object : elements) {
 			Element e = (Element) object;

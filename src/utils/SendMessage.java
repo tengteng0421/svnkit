@@ -23,13 +23,14 @@ public class SendMessage {
 		URL url = new URL(urlPath);
 		URLConnection con = url.openConnection();
 		HttpURLConnection httpCon = (HttpURLConnection) con;
-		httpCon.setRequestMethod("GET");
+		httpCon.setRequestMethod("POST");
 		httpCon.connect();
 		InputStream inputStream = httpCon.getInputStream();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "gb2312"));
 		String line = null;
 		while ((line = reader.readLine()) != null) {
 			System.out.println(line);
 		}
 	}
+
 }

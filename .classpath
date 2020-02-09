@@ -7,8 +7,8 @@
 	<classpathentry kind="lib" path="/BaseLibs/commons/mysql-connector-java-5.1.25-bin.jar" sourcepath="D:/用户目录/下载/mysql-connector-java-5.1.47.zip"/>
 	<classpathentry kind="lib" path="/BaseLibs/commons/fastjson-1.1.9.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Tools.AutoBuilder"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/SvnVersionComparer"/>
 	<classpathentry kind="lib" path="/SvnVersionComparer/lib/poi-3.17.jar"/>
 	<classpathentry kind="lib" path="/SvnVersionComparer/lib/svnkit-1.9.3.jar" sourcepath="/SvnVersionComparer/org.tmatesoft.svn_1.9.3.src.zip"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SvnVersionComparer"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

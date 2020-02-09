@@ -92,13 +92,16 @@ public class CopyExcelFiles {
 	}
 
 	private void copyExcel(String source, String target) throws IOException {
-		if (source.equals(target)) {
-			System.out.println("source和target相同, 今日日报已生成");
-			return;
-		}
+		File openFile = null;
+
 		FileInputStream fis = null;
 		FileOutputStream fos = null;
 		try {
+			if (source.equals(target)) {
+				openFile = new File(prefix + source);
+				System.out.println("source和target相同, 今日日报已生成");
+				return;
+			}
 			File f = new File(prefix + source);
 			if (!f.exists()) {
 				return;
@@ -113,17 +116,31 @@ public class CopyExcelFiles {
 			}
 			fos.flush();
 			System.out.println("复制是否成功: " + fileout.exists());
-			System.out.println("输入y打开文件:");
+			openFile = fileout;
+
+		} finally {
+			System.out.println("y-打开文件, dir-打开所在文件夹:");
 			String next = input.next();
 			if ("y".equals(next)) {
-				Runtime.getRuntime().exec("cmd /c start " + fileout.getAbsolutePath());
+				Runtime.getRuntime().exec("cmd /c start " + openFile.getAbsolutePath());
+			} else if ("dir".equals(next)) {
+				// String absolutePath = openFile.getAbsolutePath();
+				String parent = openFile.getParent();
+				// System.out.println(parent);
+				Runtime.getRuntime().exec("cmd /c start " + parent);
+
 			}
-		} finally {
 			if (fis != null) {
 				fis.close();
 			}
 			if (fos != null) {
 				fos.close();
+			}
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 	}

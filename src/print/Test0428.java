@@ -1,17 +1,16 @@
 package print;
 
-import utils.CreateStrings;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test0428 {
 	public static void main(String[] args) {
-		String s = "123456;789";
-		int indexOf = s.indexOf(";");
-		String substring = s.substring(0, indexOf >= 0 ? indexOf : s.length());
-		System.out.println(substring);
-
-		Test111 t = new Test111();
-		t.printTest111();
-		CreateStrings c = new CreateStrings();
+		List<String> list = new ArrayList<>();
+		list.add("aaa");
+		list.add("baa");
+		list.add("caa");
+		list.add("daa");
+		System.out.println(list);
 
 	}
 }
